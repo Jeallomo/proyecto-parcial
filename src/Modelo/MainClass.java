@@ -1,4 +1,4 @@
-package Ajedrez;
+package Modelo;
 
 public class MainClass {
 
