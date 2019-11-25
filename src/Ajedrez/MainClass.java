@@ -1,4 +1,5 @@
+package Ajedrez;
 
 public class MainClass {
-//adsdaas
+
 }
