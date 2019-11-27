@@ -13,8 +13,13 @@ public class Controlador implements ActionListener  {
 
 	@Override
 	public void actionPerformed(ActionEvent click) {
-		if(click.getSource() == interfaz.botonesCasillas[0][0]) {
-			interfaz.botonesCasillas[0][0].setVisible(false);
+		
+		for(int i = 0;i < 8;i++) {
+			for(int j = 0;j < 8;j++) {
+		
+		       if(click.getSource() == interfaz.botonesCasillas[0][0]) {
+		       }
+			}
 		}
 	}
 	
