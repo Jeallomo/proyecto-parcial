@@ -6,6 +6,6 @@ public class MainClass {
 		Interfaz ajedrez = new Interfaz();
 		
 		ajedrez.mostrar();
-		ajedrez.inicializarTablero();
+		//ajedrez.inicializarTablero();
 	}
 }
