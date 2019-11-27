@@ -1,4 +1,4 @@
-package Modelo;
+package JuegoAjedrez;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class Interfaz {
 	//Arreglos
-	private JButton[][] botonesCasillas= new JButton[8][8];
+	protected JButton[][] botonesCasillas= new JButton[8][8];
 	
 	//Componentes Graficos
 	private JFrame ventana;
@@ -30,6 +30,7 @@ public class Interfaz {
 			for(j=0;j<8;j++) {
 				botonesCasillas[i][j] = new JButton();
 				botonesCasillas[i][j].setBounds(i*60, j*60, 60, 60);
+				botonesCasillas[i][j].addActionListener(new Controlador(this));
 				
 				if((i+j)%2 == 0) {
 					botonesCasillas[i][j].setBackground(new Color(255,255,255));
