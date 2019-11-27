@@ -48,7 +48,7 @@ public class Interfaz {
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		tablero = new JPanel();
-		tablero.setPreferredSize(new Dimension(700,550));
+		tablero.setPreferredSize(new Dimension(700,600));
 		tablero.setLayout(null);
 		
 		iniciarFichas();
@@ -56,9 +56,10 @@ public class Interfaz {
 		for(i=0;i<8;i++) {
 			for(j=0;j<8;j++) {
 				botonesCasillas[i][j] = new JButton();
-				botonesCasillas[i][j].setBounds(30+j*ladoCasilla,50+i*ladoCasilla, ladoCasilla, ladoCasilla);
+				botonesCasillas[i][j].setBounds(30+j*ladoCasilla,100+i*ladoCasilla, ladoCasilla, ladoCasilla);
 				botonesCasillas[i][j].setEnabled(false);
 				botonesCasillas[i][j].addActionListener(new Controlador(this));
+				
 				
 				if((i+j)%2 == 0) {
 					botonesCasillas[i][j].setBackground(new Color(255,255,255));
@@ -84,55 +85,55 @@ public class Interfaz {
 		//torres
 		
 		torresBlancas[0] = new JButton("T");
-		torresBlancas[0].setBounds(40,60,ladoFicha,ladoFicha);
+		torresBlancas[0].setBounds(40,110,ladoFicha,ladoFicha);
 		tablero.add(torresBlancas[0]);
 		
 		torresBlancas[1] = new JButton("T");
-		torresBlancas[1].setBounds(40+7*ladoCasilla,60,ladoFicha,ladoFicha);
+		torresBlancas[1].setBounds(40+7*ladoCasilla,110,ladoFicha,ladoFicha);
 		tablero.add(torresBlancas[1]);
 		
 		torresNegras[0] = new JButton("T");
-		torresNegras[0].setBounds(40,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		torresNegras[0].setBounds(40,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(torresNegras[0]);
 		
 		torresNegras[1] = new JButton("T");
-		torresNegras[1].setBounds(40+7*ladoCasilla,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		torresNegras[1].setBounds(40+7*ladoCasilla,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(torresNegras[1]);
 		
 		//caballos
 		
 		caballosBlancos[0] = new JButton("T");
-		caballosBlancos[0].setBounds(ladoCasilla+40,60,ladoFicha,ladoFicha);
+		caballosBlancos[0].setBounds(ladoCasilla+40,110,ladoFicha,ladoFicha);
 		tablero.add(caballosBlancos[0]);
 		
 		caballosBlancos[1] = new JButton("T");
-		caballosBlancos[1].setBounds(40+6*ladoCasilla,60,ladoFicha,ladoFicha);
+		caballosBlancos[1].setBounds(40+6*ladoCasilla,110,ladoFicha,ladoFicha);
 		tablero.add(caballosBlancos[1]);
 		
 		caballosNegros[0] = new JButton("T");
-		caballosNegros[0].setBounds(ladoCasilla+40,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		caballosNegros[0].setBounds(ladoCasilla+40,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(caballosNegros[0]);
 		
 		caballosNegros[1] = new JButton("T");
-		caballosNegros[1].setBounds(40+6*ladoCasilla,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		caballosNegros[1].setBounds(40+6*ladoCasilla,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(caballosNegros[1]);
 		
 		//alfiles
 		
 		alfilesBlancos[0] = new JButton("T");
-		alfilesBlancos[0].setBounds(2*ladoCasilla+40,60,ladoFicha,ladoFicha);
+		alfilesBlancos[0].setBounds(2*ladoCasilla+40,110,ladoFicha,ladoFicha);
 		tablero.add(alfilesBlancos[0]);
 		
 		alfilesBlancos[1] = new JButton("T");
-		alfilesBlancos[1].setBounds(40+5*ladoCasilla,60,ladoFicha,ladoFicha);
+		alfilesBlancos[1].setBounds(40+5*ladoCasilla,110,ladoFicha,ladoFicha);
 		tablero.add(alfilesBlancos[1]);
 		
 		alfilesNegros[0] = new JButton("T");
-		alfilesNegros[0].setBounds(2*ladoCasilla+40,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		alfilesNegros[0].setBounds(2*ladoCasilla+40,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(alfilesNegros[0]);
 		
 		alfilesNegros[1] = new JButton("T");
-		alfilesNegros[1].setBounds(40+5*ladoCasilla,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		alfilesNegros[1].setBounds(40+5*ladoCasilla,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(alfilesNegros[1]);
 		
 		//peones
@@ -140,30 +141,30 @@ public class Interfaz {
 		for(int i = 0;i < 8;i++) {
 			
 			peonesBlancos[i] = new JButton();
-			peonesBlancos[i].setBounds(40+i*ladoCasilla,60+ladoCasilla,ladoFicha,ladoFicha);
+			peonesBlancos[i].setBounds(40+i*ladoCasilla,110+ladoCasilla,ladoFicha,ladoFicha);
 			tablero.add(peonesBlancos[i]);
 			
 			peonesNegros[i] = new JButton();
-			peonesNegros[i].setBounds(40+i*ladoCasilla,60+6*ladoCasilla,ladoFicha,ladoFicha);
+			peonesNegros[i].setBounds(40+i*ladoCasilla,110+6*ladoCasilla,ladoFicha,ladoFicha);
 			tablero.add(peonesNegros[i]);
 		}
 		
 		//reyes y reinas
 		
 		reyBlanco = new JButton();
-		reyBlanco.setBounds(40+4*ladoCasilla,60,ladoFicha,ladoFicha);
+		reyBlanco.setBounds(40+4*ladoCasilla,110,ladoFicha,ladoFicha);
 		tablero.add(reyBlanco);
 		
 		reyNegro = new JButton();
-		reyNegro.setBounds(40+4*ladoCasilla,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		reyNegro.setBounds(40+4*ladoCasilla,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(reyNegro);
 		
         reinaBlanca = new JButton();
-        reinaBlanca.setBounds(40+3*ladoCasilla,60,ladoFicha,ladoFicha);
+        reinaBlanca.setBounds(40+3*ladoCasilla,110,ladoFicha,ladoFicha);
 		tablero.add(reinaBlanca);
 		
 		reinaNegra = new JButton();
-		reinaNegra.setBounds(40+3*ladoCasilla,60+7*ladoCasilla,ladoFicha,ladoFicha);
+		reinaNegra.setBounds(40+3*ladoCasilla,110+7*ladoCasilla,ladoFicha,ladoFicha);
 		tablero.add(reinaNegra);
 		
 	}
