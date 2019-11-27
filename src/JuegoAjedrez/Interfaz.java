@@ -30,6 +30,7 @@ public class Interfaz {
 			for(j=0;j<8;j++) {
 				botonesCasillas[i][j] = new JButton();
 				botonesCasillas[i][j].setBounds(i*60, j*60, 60, 60);
+				botonesCasillas[i][j].setEnabled(false);
 				botonesCasillas[i][j].addActionListener(new Controlador(this));
 				
 				if((i+j)%2 == 0) {
