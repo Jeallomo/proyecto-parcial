@@ -206,4 +206,6 @@ public class Interfaz {
 		tablero.add(reinaNegra);
 		
 	}
+	
+	
 }
