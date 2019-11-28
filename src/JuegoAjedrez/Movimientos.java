@@ -1,5 +1,7 @@
 package JuegoAjedrez;
 
+import java.util.Arrays;
+
 import javax.swing.JButton;
 
 public class Movimientos extends Interfaz{
@@ -158,6 +160,18 @@ public class Movimientos extends Interfaz{
 				reina.setLocation((int)X+longitud*ladoCasilla,(int)Y-longitud*ladoCasilla);
 				break;
 		}
+	}
+	void moverCaballo(JButton caballo,int desplazamientoX,int desplazamientoY) {
+		
+		int[] desplazamiento = new int[2];
+		desplazamiento[0] = desplazamientoX;
+		desplazamiento[1] = desplazamientoY;
+		
+		double X = caballo.getLocation().getX();
+		double Y = caballo.getLocation().getY();
+		
+		caballo.setLocation((int)X+desplazamientoX*ladoCasilla,(int)Y+desplazamientoY*ladoCasilla);
+
 	}
 		
 }
