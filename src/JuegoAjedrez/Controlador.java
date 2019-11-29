@@ -3,6 +3,7 @@ package JuegoAjedrez;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class Controlador implements ActionListener  {
@@ -23,12 +24,43 @@ public class Controlador implements ActionListener  {
 		    	   JOptionPane.showMessageDialog(null, String.valueOf(i)+String.valueOf(j));
 		       }
 		       
-			   else if(click.getSource() == interfaz.torresBlancas[0]) {
-		    	   JOptionPane.showMessageDialog(null, String.valueOf(i)+String.valueOf(j));
-		       }
-		       
 			}
 		}
+		
+		//if(click.getSource() == interfaz.torresBlancas[0]) {
+	    	  
+	    //}
+		
+	}
+	
+	public int posicionFichaMatrizX(JButton ficha) {
+		
+		int posicionX = -1; //Para generar error
+		
+		for(int i = 0;i < 8;i++) {
+			
+			if(interfaz.botonesCasillas[i][0].getLocation().getX() - 10 == ficha.getLocation().getX())
+				posicionX = i;
+			
+		}
+		
+		return posicionX;
+		
+	}
+	
+    public int posicionFichaMatrizY(JButton ficha) {
+		
+		int posicionY = -1; //Para generar error
+		
+		for(int i = 0;i < 8;i++) {
+			
+			if(interfaz.botonesCasillas[0][i].getLocation().getX() - 10 == ficha.getLocation().getX())
+				posicionY = i;
+			
+		}
+		
+		return posicionY;
+		
 	}
 	
 }
