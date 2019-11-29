@@ -22,19 +22,19 @@ public class Interfaz {
 	
 	//Fichas
 	
-	private JButton[] torresNegras = new JButton[2];
-	private JButton[] alfilesNegros = new JButton[2];
-	private JButton[] caballosNegros = new JButton[2];
-	private JButton[] peonesNegros = new JButton[8];
-	private JButton reyNegro;
-	private JButton reinaNegra;
+	protected JButton[] torresNegras = new JButton[2];
+	protected JButton[] alfilesNegros = new JButton[2];
+	protected JButton[] caballosNegros = new JButton[2];
+	protected JButton[] peonesNegros = new JButton[8];
+	protected JButton reyNegro;
+	protected JButton reinaNegra;
 	
-	private JButton[] torresBlancas = new JButton[2];
-	private JButton[] alfilesBlancos = new JButton[2];
-	private JButton[] caballosBlancos = new JButton[2];
-	private JButton[] peonesBlancos = new JButton[8];
-	private JButton reyBlanco;
-	private JButton reinaBlanca;
+	protected JButton[] torresBlancas = new JButton[2];
+	protected JButton[] alfilesBlancos = new JButton[2];
+	protected JButton[] caballosBlancos = new JButton[2];
+	protected JButton[] peonesBlancos = new JButton[8];
+	protected JButton reyBlanco;
+	protected JButton reinaBlanca;
 	
 	//Variables
 	
@@ -90,6 +90,7 @@ public class Interfaz {
 		torresBlancas[0].setBounds(40,110,ladoFicha,ladoFicha);
 		torresBlancas[0].setContentAreaFilled(false);
 		torresBlancas[0].setIcon(new ImageIcon(getClass().getResource("/img/torreB.png")));
+		torresBlancas[0].addActionListener(new Controlador(this));
 		tablero.add(torresBlancas[0]);
 		
 		torresBlancas[1] = new JButton();
