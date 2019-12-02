@@ -17,6 +17,7 @@ public class Interfaz {
 	protected JButton[] fichasNegras = new JButton[8];
 	protected JButton[] fichasBlancas = new JButton[8];
 	
+	
 	protected JButton[][] botonesCasillas= new JButton[8][8];
 	protected JLabel[] coordenadasNumeros = new JLabel[8];
 	protected JLabel[] coordenadasLetras = new JLabel[8];
@@ -130,7 +131,6 @@ public class Interfaz {
 		torresBlancas[0].setBounds(50,10,ladoFicha,ladoFicha);
 		torresBlancas[0].setContentAreaFilled(false);
 		torresBlancas[0].setIcon(new ImageIcon(getClass().getResource("/img/torreB.png")));
-		torresBlancas[0].addActionListener(new Controlador(this));
 		tablero.add(torresBlancas[0]);
 		
 		torresBlancas[1] = new JButton();

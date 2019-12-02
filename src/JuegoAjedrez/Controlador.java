@@ -9,9 +9,14 @@ import javax.swing.JOptionPane;
 public class Controlador implements ActionListener  {
 
 	private Interfaz interfaz;
+	private Validacion validacion;
 
     public Controlador(Interfaz interfaceGrafica) {
         this.interfaz = interfaceGrafica;
+    }
+    
+    public Controlador(JButton boton, int tipoFicha) {
+        this.validacion = new Validacion(boton, tipoFicha);
     }
 
 	@Override
@@ -23,13 +28,9 @@ public class Controlador implements ActionListener  {
 			   if(click.getSource() == interfaz.botonesCasillas[i][j]) {
 		    	   JOptionPane.showMessageDialog(null, String.valueOf(i)+String.valueOf(j));
 		       }
-		       
+			   
 			}
 		}
-		
-		//if(click.getSource() == interfaz.torresBlancas[0]) {
-	    	  
-	    //}
 		
 	}
 	
