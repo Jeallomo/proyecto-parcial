@@ -14,8 +14,8 @@ import javax.swing.SwingConstants;
 public class Interfaz {
 	//Arreglos
 	
-	protected JButton[] fichasNegras = new JButton[8];
-	protected JButton[] fichasBlancas = new JButton[8];
+	protected JButton[] fichasNegras = new JButton[16];
+	protected JButton[] fichasBlancas = new JButton[16];
 	
 	
 	protected JButton[][] botonesCasillas= new JButton[8][8];
