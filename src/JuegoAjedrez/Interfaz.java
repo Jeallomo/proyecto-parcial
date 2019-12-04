@@ -263,61 +263,61 @@ public class Interfaz {
 		 */
 		
 		for(int i = 0;i < 8;i++) {
-			peonesBlancos[i].addActionListener(new Controlador(peonesBlancos[i],1));
+			peonesBlancos[i].addActionListener(new Controlador(this,peonesBlancos[i],1));
 			fichasBlancas[i] = peonesBlancos[i];
 		}
 		
-		torresBlancas[0].addActionListener(new Controlador(torresBlancas[0],2));
+		torresBlancas[0].addActionListener(new Controlador(this,torresBlancas[0],2));
 		fichasBlancas[8] = torresBlancas[0];
 		
-		torresBlancas[1].addActionListener(new Controlador(torresBlancas[1],2));
+		torresBlancas[1].addActionListener(new Controlador(this,torresBlancas[1],2));
 		fichasBlancas[9] = torresBlancas[1];
 		
-		alfilesBlancos[0].addActionListener(new Controlador(alfilesBlancos[0],3));
+		alfilesBlancos[0].addActionListener(new Controlador(this,alfilesBlancos[0],3));
 		fichasBlancas[10] = alfilesBlancos[0];
 		
-		alfilesBlancos[1].addActionListener(new Controlador(alfilesBlancos[1],3));
+		alfilesBlancos[1].addActionListener(new Controlador(this,alfilesBlancos[1],3));
 		fichasBlancas[11] = alfilesBlancos[1];
 		
-		caballosBlancos[0].addActionListener(new Controlador(caballosBlancos[0],4));
+		caballosBlancos[0].addActionListener(new Controlador(this,caballosBlancos[0],4));
 		fichasBlancas[12] = caballosBlancos[0];
 		
-		caballosBlancos[1].addActionListener(new Controlador(caballosBlancos[1],4));
+		caballosBlancos[1].addActionListener(new Controlador(this,caballosBlancos[1],4));
 		fichasBlancas[13] = caballosBlancos[1];
 		
-		reinaBlanca.addActionListener(new Controlador(reinaBlanca,5));
+		reinaBlanca.addActionListener(new Controlador(this,reinaBlanca,5));
 		fichasBlancas[14] = reinaBlanca;
 		
-		reyBlanco.addActionListener(new Controlador(reyBlanco,6));
+		reyBlanco.addActionListener(new Controlador(this,reyBlanco,6));
 		fichasBlancas[15] = reyBlanco;
 		
 		for(int i = 0;i < 8;i++) {
-			peonesNegros[i].addActionListener(new Controlador(peonesNegros[i],1));
+			peonesNegros[i].addActionListener(new Controlador(this,peonesNegros[i],1));
 			fichasNegras[i] = peonesNegros[i];
 		}
 		
-		torresNegras[0].addActionListener(new Controlador(torresNegras[0],2));
+		torresNegras[0].addActionListener(new Controlador(this,torresNegras[0],2));
 		fichasNegras[8] = torresNegras[0];
 		
-		torresNegras[1].addActionListener(new Controlador(torresNegras[1],2));
+		torresNegras[1].addActionListener(new Controlador(this,torresNegras[1],2));
 		fichasNegras[9] = torresNegras[1];
 		
-		alfilesNegros[0].addActionListener(new Controlador(alfilesNegros[0],3));
+		alfilesNegros[0].addActionListener(new Controlador(this,alfilesNegros[0],3));
 		fichasNegras[10] = alfilesNegros[0];
 		
-		alfilesNegros[1].addActionListener(new Controlador(alfilesNegros[1],3));
+		alfilesNegros[1].addActionListener(new Controlador(this,alfilesNegros[1],3));
 		fichasNegras[11] = alfilesNegros[1];
 		
-		caballosNegros[0].addActionListener(new Controlador(caballosNegros[0],4));
+		caballosNegros[0].addActionListener(new Controlador(this,caballosNegros[0],4));
 		fichasNegras[12] = caballosNegros[0];
 		
-		caballosNegros[1].addActionListener(new Controlador(caballosNegros[1],4));
+		caballosNegros[1].addActionListener(new Controlador(this,caballosNegros[1],4));
 		fichasNegras[13] = caballosNegros[1];
 		
-		reinaNegra.addActionListener(new Controlador(reinaNegra,5));
+		reinaNegra.addActionListener(new Controlador(this,reinaNegra,5));
 		fichasNegras[14] = reinaNegra;
 		
-		reyNegro.addActionListener(new Controlador(reyNegro,6));
+		reyNegro.addActionListener(new Controlador(this,reyNegro,6));
 		fichasNegras[15] = reyNegro;
 		
 	}

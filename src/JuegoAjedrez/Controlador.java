@@ -15,8 +15,9 @@ public class Controlador implements ActionListener  {
         this.interfaz = interfaceGrafica;
     }
     
-    public Controlador(JButton boton, int tipoFicha) {
+    public Controlador(Interfaz interfaz,JButton boton, int tipoFicha) {
         this.validacion = new Validacion(boton, tipoFicha);
+        this.interfaz = interfaz;
     }
 
 	@Override
@@ -31,6 +32,10 @@ public class Controlador implements ActionListener  {
 			   
 			}
 		}
+		
+		 if(click.getSource() == validacion.getBoton()) {
+	    	   JOptionPane.showMessageDialog(null, validacion.getTipoFicha());
+	     }
 		
 	}
 	

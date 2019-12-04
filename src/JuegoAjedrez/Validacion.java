@@ -11,5 +11,13 @@ public class Validacion {
 		this.boton = boton;
 		this.tipoFicha = tipoFicha;
 	}
+	
+	public JButton getBoton() {
+		return this.boton;
+	}
+	
+	public int getTipoFicha() {
+		return this.tipoFicha;
+	}
 
 }
